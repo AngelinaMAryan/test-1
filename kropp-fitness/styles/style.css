@@ -244,6 +244,11 @@ svg * {
   padding-inline: var(--container-padding-x);
  }
 
+ .container-wide {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
  .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -296,9 +301,10 @@ svg * {
     content: attr(data-title);
     position: absolute;
     z-index: -1;
-    top: -0.45em;
+    top: -0.3em;
     left: -0.6em;
     font-size: 2.8em;
+    line-height: 1;
     font-family: var(--font-family-accent);
     color: transparent;
     -webkit-text-stroke: 1px var(--color-light-gray);
@@ -308,7 +314,7 @@ svg * {
   .backdrop-title.centered::after {
     left: 50%;
     translate: -50% 0;
-    top: -0.55em;
+    top: -0.25em;
   }
 
   .button {
@@ -562,8 +568,6 @@ svg * {
 
   .training-types {
     position: relative;
-    max-width: 1920px;
-    margin-inline: auto;
     padding-top: 70px;
     padding-bottom: 120px;
     background-color: var(--color-dark);
@@ -701,6 +705,35 @@ svg * {
     max-width: 400px;
   }
 
+  .location {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .location-map-image {
+    height: auto;
+  }
+
+  .location-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 15px;
+  }
+
+  .location-body:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  .location-description {
+    max-width: 490px;
+  }
+
+  .location-description:not(:last-child) {
+    margin-bottom: 37px;
+  }
 
 
 
@@ -756,6 +789,11 @@ svg * {
 
     .join-us-title:not(:last-child) {
       margin-bottom: 80px;
+    }
+
+    .location {
+      display: flex;
+      flex-direction: column-reverse;
     }
   }
 
@@ -837,4 +875,13 @@ svg * {
       align-items: center;
       row-gap: 20px;
     }
+
+    .location-body {
+      padding-block: 40px;
+    }
+
+    .location-description:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
   }
