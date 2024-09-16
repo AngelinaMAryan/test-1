@@ -726,8 +726,9 @@ svg * {
     margin-bottom: 24px;
   }
 
-  .location-map-image {
-    height: auto;
+  .location-map {
+    max-width: 960px;
+    height: 600px;
   }
 
   .location-body {
